@@ -214,7 +214,6 @@ function App() {
                   autoPlay
                   loop
                   playsInline
-                  controls
                 />
 
                 <p className="takecare">
