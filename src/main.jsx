@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
@@ -32,15 +33,23 @@ function App() {
   const [comment, setComment] = useState('');
   const [commentIndex, setCommentIndex] = useState(0);
   const [q2NoPos, setQ2NoPos] = useState({ top: 20, left: 10 });
-  const [q4NoScale, setQ4NoScale] = useState(1);
+  const [q4YesComment, setQ4YesComment] = useState(false);
+  const [q4NoComment, setQ4NoComment] = useState(false);
+  const [q5NoScale, setQ5NoScale] = useState(1);
   const [q2Comment, setQ2Comment] = useState(false);
   const [q3Comment, setQ3Comment] = useState(false);
-  const [q4Video, setQ4Video] = useState(false);
+  const [q5Video, setQ5Video] = useState(false);
   const [shake, setShake] = useState(false);
   const [showDance, setShowDance] = useState(false);
+  const [q4NoVideo, setQ4NoVideo] = useState(false);
 
   const next = () =>
-    setScreen(s => ({ q1: 'q2', q2: 'q3', q3: 'q4' }[s] || s));
+    setScreen(s => ({
+      q1: 'q2',
+      q2: 'q3',
+      q3: 'q4',
+      q4: 'q5'
+    }[s] || s));
 
   const moveNo = () =>
     setQ2NoPos({
@@ -64,6 +73,7 @@ function App() {
   return (
     <main className={shake ? 'app shake' : 'app'}>
       <div className="grain" />
+
       <div className="topbar">
         <span>UNOFFICIAL QUESTIONNAIRE</span>
         <span>CASE FILE: RSS-01</span>
@@ -73,11 +83,18 @@ function App() {
         <section className="panel intro">
           <div className="stamp">UNOFFICIAL</div>
           <p className="eyebrow">A VERY SERIOUS DOCUMENT</p>
-          <h1>A Few Questions<br /><em>From a Stranger</em></h1>
+
+          <h1>
+            A Few Questions<br />
+            <em>From a Stranger</em>
+          </h1>
+
           <p className="sub">Please answer honestly, Major.</p>
+
           <button className="primary" onClick={() => setScreen('q1')}>
             Begin Questionnaire <span>→</span>
           </button>
+
           <p className="tiny">
             No government department was consulted in the making of this questionnaire.
           </p>
@@ -85,16 +102,31 @@ function App() {
       )}
 
       {screen === 'q1' && (
-        <Question number="01" text="Are you going to reduce your Instagram subscription fees?">
-          <button className="answer" onClick={next}>YES</button>
-          <button className="answer" onMouseEnter={nextComment} onClick={nextComment}>
-            NO {comment && <span className="bubble">{comment}</span>}
+        <Question
+          number="01"
+          text="Are you going to reduce your Instagram subscription fees?"
+        >
+          <button className="answer" onClick={next}>
+            YES
+          </button>
+
+          <button
+            className="answer"
+            onMouseEnter={nextComment}
+            onMouseLeave={() => setComment('')}
+            onClick={nextComment}
+          >
+            NO
+            {comment && <span className="bubble">{comment}</span>}
           </button>
         </Question>
       )}
 
       {screen === 'q2' && (
-        <Question number="02" text="Are you going to come live every day?">
+        <Question
+          number="02"
+          text="Are you going to come live every day?"
+        >
           <button
             className="answer"
             onMouseEnter={() => setQ2Comment(true)}
@@ -102,7 +134,12 @@ function App() {
             onClick={next}
           >
             YES
-            {q2Comment && <span className="bubble wide">Worth the ₹199</span>}
+
+            {q2Comment && (
+              <span className="bubble wide">
+                Sadasyata toh sampann hui, darshan bhi dijiye Prabhu 🙏 
+              </span>
+            )}
           </button>
 
           <button
@@ -122,15 +159,19 @@ function App() {
       {screen === 'q3' && (
         <Question
           number="03"
-          text="Are you going to help me with my UPSC prep through your live sessions on Ethics?"
+          text="Are you going to help me with my prep through your live sessions on Ethics?"
         >
-          <button className="answer" onClick={next}>YES</button>
+          <button className="answer" onClick={next}>
+            YES
+          </button>
+
           <button
             className="answer disabled"
             onMouseEnter={() => setQ3Comment(true)}
             onMouseLeave={() => setQ3Comment(false)}
           >
             NO
+
             {q3Comment && (
               <span className="bubble wide">
                 Gajni jaisi memory lekar Sarkari Naukri ka swapn dekh rahi hu.
@@ -142,18 +183,89 @@ function App() {
       )}
 
       {screen === 'q4' && (
-        <Question number="04" text="Am I your sister?">
+        <section className="panel question">
+          <div className="question-head">
+            <span>QUESTION 04</span>
+            <span>CONFIDENTIAL*</span>
+          </div>
+
+          <h2>Have you ever seen a god?</h2>
+
+          {!q4NoVideo ? (
+            <video
+              className="god-video"
+              src="/God.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          ) : (
+            <video
+              className="god-video"
+              src="/penguin.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          )}
+
+          <div className="answers">
+            <button
+              className="answer"
+              onMouseEnter={() => setQ4YesComment(true)}
+              onMouseLeave={() => setQ4YesComment(false)}
+              onClick={next}
+            >
+              YES
+
+              {q4YesComment && (
+                <span className="bubble wide">
+                  How? When did you see me? 👀
+                </span>
+              )}
+            </button>
+
+            <button
+              className="answer"
+              onMouseEnter={() => setQ4NoVideo(true)}
+              onMouseLeave={() => setQ4NoVideo(false)}
+              onClick={next}
+            >
+              NO
+
+              {q4NoVideo && (
+                <span className="bubble wide">
+                  Of course. You’ll never see me. 😌
+                </span>
+              )}
+            </button>
+          </div>
+
+          <p className="tiny">
+            *Confidential unless someone screenshots it.
+          </p>
+        </section>
+      )}
+
+      {screen === 'q5' && (
+        <Question
+          number="05"
+          text="Am I your sister?"
+        >
           <button
             className="answer"
-            onMouseEnter={() => setQ4Video(true)}
-            onMouseLeave={() => setQ4Video(false)}
-            onClick={() => setQ4NoScale(s => Math.min(s + 0.55, 4.2))}
+            onMouseEnter={() => setQ5Video(true)}
+            onMouseLeave={() => setQ5Video(false)}
+            onClick={() => setQ5NoScale(s => Math.min(s + 0.55, 4.2))}
           >
             YES
-            {q4Video && (
+
+            {q5Video && (
               <video
-                className="q4-video"
-                src="/q4-video.mp4"
+                className="q5-video"
+                src="/yeyy.mp4"
                 autoPlay
                 loop
                 playsInline
@@ -163,7 +275,7 @@ function App() {
 
           <button
             className="answer no-grow"
-            style={{ transform: `scale(${q4NoScale})` }}
+            style={{ transform: `scale(${q5NoScale})` }}
             onClick={comedy}
           >
             NO
@@ -232,8 +344,8 @@ function App() {
           </div>
         </section>
       )}
-      {screen === 'sincere' && (
 
+      {screen === 'sincere' && (
         <section className="sincere panel">
           <p className="eyebrow">ONE LAST THING</p>
 
@@ -312,8 +424,8 @@ function App() {
             But still… take care, Major. 🫡
           </p>
         </section>
-
       )}
+
     </main>
   );
 }
@@ -325,9 +437,16 @@ function Question({ number, text, children }) {
         <span>QUESTION {number}</span>
         <span>CONFIDENTIAL*</span>
       </div>
+
       <h2>{text}</h2>
-      <div className="answers">{children}</div>
-      <p className="tiny">*Confidential unless someone screenshots it.</p>
+
+      <div className="answers">
+        {children}
+      </div>
+
+      <p className="tiny">
+        *Confidential unless someone screenshots it.
+      </p>
     </section>
   );
 }

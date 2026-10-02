@@ -187,7 +187,7 @@ button {
 .bubble {
   position: absolute;
   left: 50%;
-  bottom: calc(100% + 14px);
+  bottom: calc(100% + 12px);
   transform: translateX(-50%);
   background: #f0f0e8;
   color: #1b2117;
@@ -580,10 +580,26 @@ button {
 }
 
 /* =========================
-   Q4 VIDEO
+Q4 GOD VIDEO
 ========================= */
 
-.q4-video {
+.god-video {
+  display: block;
+  position: relative;
+  width: min(320px, 80vw);
+  height: auto;
+  margin: -35px auto 50px;
+  border: 1px solid #727d65;
+  border-radius: 4px;
+  box-shadow: 0 15px 40px #0008;
+  z-index: 1;
+}
+
+/* =========================
+   Q5 VIDEO
+========================= */
+
+.q5-video {
   position: absolute;
   left: 50%;
   bottom: calc(100% + 20px);
