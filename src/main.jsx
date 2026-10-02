@@ -233,60 +233,84 @@ function App() {
         </section>
       )}
       {screen === 'sincere' && (
-        <section className="sincere panel"> <p className="eyebrow">ONE LAST THING</p> <h2>Namasthe Major,</h2>
 
-          <div className="message"> <p> Okay, jokes apart — I’m not sending this because I think you’re cute or handsome. You’ll start having wrinkles one day anyway. 😭😂 </p>
+        <section className="sincere panel">
+          <p className="eyebrow">ONE LAST THING</p>
+
+          <h2>Namasthe Major,</h2>
+
+          <div className="message">
 
             <p>
-              I’m sending this because sometimes you seem a little low. Maybe I’m
-              wrong, but it feels like something might be bothering you.
+              Okay, jokes apart — I’m not sending this because I think you’re cute or
+              handsome. You’ll start having wrinkles one day anyway. 😭😂
             </p>
 
             <p>
-              Or are you just being lazy or too tired to join the sessions on time? 🤨🙊
+              I’m sending this not to flirt (because Shani has already taken me 👉👈),
+              but genuinely out of respect, because sometimes you seem a little low.
+              Maybe I’m wrong, but it just feels like something might be
+              bothering you.
             </p>
 
             <p>
-              I know it’s not easy to leave the Army when you once dreamed of that life.
+              Or are you just being lazy or too tired to be happy on the live? 🤨🙊
             </p>
 
             <p>
+              I know it’s not easy to retire from the Army when you once dreamed of that life.
               I really admire what you’ve achieved at such a young age. 🫡 Meanwhile,
-              I haven’t even passed my sade sathi phase yet at 25, bruhhhhh. 😭 But
-              more than that, you genuinely seem like a kind-hearted person. It’s
-              pretty evident that you don’t want everyone to have access to your life.
+              I haven’t even passed my Sade Sati phase yet at 25, bruhhhhh. 🤡
             </p>
 
             <p>
-              I’ve seen a few meme pages trolling you just because you started an Instagram subscription,
-              and even people taking photos and videos of you when you’re just trying to enjoy your personal
-              space and spreading them around. And yeahhh, I ended up fighting with one of my friends while
-              defending you hehe 🤭. I honestly felt a little disheartened seeing people forget basic respect,
-              especially towards someone who has served in the Army.
-
+              The reason behind all my Adhikaprasangha is that I’ve seen a few meme
+              pages trolling you just because you started an Instagram subscription,
+              with some people even crossing the line and invading your privacy.
             </p>
 
             <p>
-              But honestly, don’t take those trolls too seriously. Whatever is going
+              And yeahhh, I actually ended up fighting with one of my friends while
+              defending your subscription plan Hehe 🤭
+              Swayam ka jeevan paatal mein jaa raha hai aur main chali aayi aapke liye
+              yuddha samar karne. 😭
+            </p>
+
+            <p>
+              But honestly, I did feel a little disheartened seeing people forget basic
+              respect and treat someone’s personal life like public entertainment,
+              especially someone who has served in the Army.
+            </p>
+
+            <p>
+              Anyway, don’t take those trolls or memes too seriously. Whatever is going
               on, don’t let it bother you too much. Go to a club, have lots of beer,
-              and enjoy life, bro. Let those pictures go viral and let me see them
-              haha 😂. They're all just jalax because you're an 11/10 baddie.
+              enjoy your life, bro. Let those pictures go viral and let me see them too.
+              Hahaha 😂
             </p>
 
             <p>
-              Anyways, may Shiva bless you with good health, prosperity, and the love of your
-              life — someone who loves your heart, not just your looks. And yes, lots
-              and lots of kids too. 😂
+              They’re all just jalax because you’re an ♾️/10 baddie. 🫵🏻
+            </p>
+
+            <p>
+              Anyways, may Shiva bless you with good health, prosperity, and the love
+              of your life — someone who loves your heart, not just your looks.
+              And yahhh, lots and lots of kids too. 😂
             </p>
 
           </div>
 
           <ArmyIllustration />
 
-          <p className="eyebrow"> I never thought I’d be doing something this cringe in my entire life — 
+          <p className="eyebrow">
+            I never thought I’d be doing something this cringe in my entire life —
             making a silly questionnaire like this. Feels like my aura is going 📉
           </p>
-          <p className="takecare">but still… take care, Major. 🫡</p>
+
+          <p className="takecare">
+            But still… take care, Major. 🫡
+          </p>
         </section>
 
       )}
