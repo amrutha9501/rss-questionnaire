@@ -34,7 +34,6 @@ function App() {
   const [commentIndex, setCommentIndex] = useState(0);
   const [q2NoPos, setQ2NoPos] = useState({ top: 20, left: 10 });
   const [q4YesComment, setQ4YesComment] = useState(false);
-  const [q4NoComment, setQ4NoComment] = useState(false);
   const [q5NoScale, setQ5NoScale] = useState(1);
   const [q2Comment, setQ2Comment] = useState(false);
   const [q3Comment, setQ3Comment] = useState(false);
@@ -137,7 +136,7 @@ function App() {
 
             {q2Comment && (
               <span className="bubble wide">
-                Sadasyata toh sampann hui, darshan bhi dijiye Prabhu 🙏 
+                Sadasyata toh sampann hui, darshan bhi dijiye Prabhu 🙏
               </span>
             )}
           </button>
@@ -347,7 +346,7 @@ function App() {
         <section className="sincere panel">
           <p className="eyebrow">ONE LAST THING</p>
 
-          <h2>Namasthe Major,</h2>
+          <h2>Namaste Major,</h2>
 
           <div className="message">
 
@@ -358,7 +357,7 @@ function App() {
 
             <p>
               I’m sending this not to flirt (because Shani has already taken me 👉👈),
-              but genuinely out of respect, because sometimes you seem a little low.
+              but genuinely out of respect, because sometimes you seem a little down.
               Maybe I’m wrong, but it just feels like something might be
               bothering you.
             </p>
@@ -368,33 +367,33 @@ function App() {
             </p>
 
             <p>
-              I know it’s not easy to retire from the Army when you once dreamed of that life.
+              I know it’s not easy to retire from the Army when that was once the life you dreamed of.
               I really admire what you’ve achieved at such a young age. 🫡 Meanwhile,
               I haven’t even passed my Sade Sati phase yet at 25, bruhhhhh. 🤡
             </p>
 
             <p>
-              The reason behind all my Adhikaprasangha is that I’ve seen a few meme
+              The reason for all this Adhikaprasangha is that I’ve seen a few meme
               pages trolling you just because you started an Instagram subscription,
               with some people even crossing the line and invading your privacy.
             </p>
 
             <p>
               And yeahhh, I actually ended up fighting with one of my friends while
-              defending your subscription plan Hehe 🤭
+              defending your subscription plan. Hehe 🤭
               Swayam ka jeevan paatal mein jaa raha hai aur main chali aayi aapke liye
               yuddha samar karne. 😭
             </p>
 
             <p>
-              But honestly, I did feel a little disheartened seeing people forget basic
-              respect and treat someone’s personal life like public entertainment,
-              especially someone who has served in the Army.
+              But honestly, I did feel a little disheartened seeing people insult and mock you,
+              especially because you’ve served in the Army. I just felt that you deserved
+              a little more respect.
             </p>
 
             <p>
-              Anyway, don’t take those trolls or memes too seriously. Whatever is going
-              on, don’t let it bother you too much. Go to a club, have lots of beer,
+              Anyway, enough of my serious gyaan. Don’t take those trolls or memes too seriously.
+              Don’t let them bother you too much. Go to a club, have lots of beer,
               enjoy your life, bro. Let those pictures go viral and let me see them too.
               Hahaha 😂
             </p>
