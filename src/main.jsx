@@ -197,7 +197,6 @@ function App() {
               src="/God.mp4"
               autoPlay
               loop
-              muted
               playsInline
             />
           ) : (
@@ -206,7 +205,6 @@ function App() {
               src="/penguin.mp4"
               autoPlay
               loop
-              muted
               playsInline
             />
           )}
