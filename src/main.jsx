@@ -202,7 +202,7 @@ function App() {
           ) : (
             <video
               className="god-video"
-              src="/Penguin.mp4"
+              src="/penguin.mp4"
               autoPlay
               loop
               playsInline
